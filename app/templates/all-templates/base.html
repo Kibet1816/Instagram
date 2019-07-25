@@ -9,14 +9,16 @@
     <title>Your title</title>
     {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6SfN5vj_DIpY5fgWYdwHAN0lYUkCdY4Iy97a6OLCgWZJpTQv" type="image/x-icon">
 </head>
 <body>
     {% include 'navbar.html' %}
 
 
     {% block content %}
+
     {% endblock %}
     
     {% block scripts %}
