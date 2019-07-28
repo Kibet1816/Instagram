@@ -2,4 +2,13 @@
 
 {% block content %}
 <h1 class="text-center" >Welcome</h1>
+{% for image_item in images %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {{image_item.image}}
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
