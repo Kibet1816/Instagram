@@ -30,8 +30,8 @@ class Image(models.Model):
     """
     image = models.ImageField(upload_to = 'media/')
     image_name = models.CharField(max_length=60)
-    image_caption = models.TextField()
-    likes = models.IntegerField()
+    image_caption = models.CharField(max_length=100)
+    # likes = models.IntegerField()
     profile = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
 
     def save_image(self):
