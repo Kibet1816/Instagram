@@ -10,7 +10,7 @@
 </form><br><br>
 <hr>
 {% for image_item in images %}
-<div class="wrapper-grid" style="width: 100%;">
+<div class="wrapper-grid">
     <button type="button" data-toggle="modal" data-target="#exampleModalLong{{image_item.id}}">
         <div class="content">
             <div class="content-overlay"></div>
@@ -47,6 +47,3 @@
     </div>
     {{form.media}}
     {% endblock %}
-    
-    
-    

@@ -1,19 +1,18 @@
-# BLOGGING
+# Instagram
 
 ## Description
 
- This is a web application that allows users to express themselves using a blog posts. They they first create an account then log in to start creating blogs..
+ This is a website clone of the instagram application
 
  By **Denis Kibet**
 
-## [Live Site](https://infinite-dawn-83643.herokuapp.com/)
-
 The user can:
 
-- See various blog posts
-- View blogposts they like
-- See the latests posts
-- Subscribe to latest post service
+- Register to use the program
+- Sign In to his/her profile
+- Post images in the profile page
+- Like the posted images
+- Comment on the posted images
 
 ## Setup/Installation Requirements
 
@@ -27,8 +26,8 @@ The user can:
 
 - Clone the application using git clone(this copies the app onto your device). In terminal:
 
-          $ git clone https://github.com/Kibet1816/Blogging.git
-          $ cd Blogging
+          $ git clone https://github.com/Kibet1816/Instagram.git
+          $ cd Instagram
 
 - Creating the virtual environment
 
@@ -38,15 +37,11 @@ The user can:
 
 - Installing Flask and other Modules
 
-          $ python3.6 -m pip install Flask
-          $ python3.6 -m pip install Flask-Bootstrap
-          $ python3.6 -m pip install Flask-Script
           $ python3.6 -m pip install -r requirements.txt
 
 - Run the application:
 
-          $ chmod a+x start.sh
-          $ ./start.sh
+          $ python3.6 manage.py runserver
 
 ### Testing the Application
 
@@ -63,12 +58,11 @@ The user can:
 
 | Behaviour               |       Sample Input       | Sample Output                                        |
 | :---------------------- | :----------------------: | :--------------------------------------------------- |
-| Display latest blogs    |       On page load       | List of various blogs I have written                 |
+| Sign Up required    |       On page load       | Registration form apperars                 |
 | Registration            | Submit regitration form  | User creates an account and receives welcome email   |
 | Subscription            | Submit subscription form | User receives email eb=very time there is a new post |
-| Edit posts(writer)      |     Submit edit post     | The post is updated with new data from user          |
-| Delete posts(writer)    |    Click delete post     | Post is deleted                                      |
-| Delete comments(writer) |   Click delete comment   | Comment is deleted                                   |
+| Post an image          | 'image.jpeg' | Image is posted and appears on profile page |
+
 
 ## Support and contact details
 
@@ -78,5 +72,5 @@ For any questions, troubleshooting or contributions, find me on:
 
 ### License
 
-[MIT LICENSE](https://github.com/Kibet1816/Blogging/blob/master/license.md)
+[MIT LICENSE](https://github.com/Kibet1816/Instagram/blob/master/license)
 Copyright (c) {2019}
