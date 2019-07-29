@@ -16,15 +16,14 @@ def display_images(request):
 
 @login_required(login_url='/accounts/login/')
 def profile_image(request):
-    images = Image.all_images()
     if request.method == 'POST':
+        images = Image.all_images()
         form = ImageForm(request.POST,request.FILES)
         if form.is_valid():
-            pic = form.save(commit='False')
+            pic = form.save(commit=False)
             pic.save()
             images = Image.all_images()
     else:
         form = ImageForm()
-        images = Image.all_images()
     return render(request,'all-templates/profile.html',{"form":form,"images":images})
         
