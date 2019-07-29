@@ -10,6 +10,19 @@ class Profile(models.Model):
     photo = models.ImageField(upload_to='media/')
     user = models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
 
+    def save_profile(self):
+        self.save()
+    
+    @classmethod
+    def get_by_id(cls, id):
+        profile = Profile.objects.get(user = id)
+        return profile
+
+    @classmethod
+    def filter_by_id(cls, id):
+        profile = Profile.objects.filter(user = id).first()
+        return profile
+
 
 class Image(models.Model):
     """
