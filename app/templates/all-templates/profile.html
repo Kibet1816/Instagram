@@ -1,0 +1,20 @@
+{%extends 'all-templates/base.html'%} 
+{% load bootstrap3 %}
+<!-- Some content here-->
+{% block content %}
+<!-- Looping through news end   -->
+<div class="container-fluid">
+
+  <form action="{%url 'profile'%}" method="post">
+    {%csrf_token%}
+
+    {% bootstrap_form form layout='inline' %}
+    <input type="submit" value="Upload">
+  </form>
+  {% for image_item in images %}
+  <div class="container">
+      <img src="{{image_item.image.url}}" alt="">
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
