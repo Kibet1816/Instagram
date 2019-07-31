@@ -1,13 +1,18 @@
 {%extends 'all-templates/base.html'%} 
 {% load bootstrap3 %}
 {% block content %}
-
-<form action="{%url 'profile'%}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
-    
-    {% bootstrap_form form layout='inline' %}
-    <input type="submit" value="Upload">
-</form><br><br>
+<a href="{% url 'upload' %}"><button class="btn btn-success btn-lg" style="float: right;" >Upload Image</button></a>
+<br><br><br><br>
+<div class="panel-default">
+    <div class="panel-heading"><h1 class="text-center" >Your Images</h1></div>
+    <style>
+        .panel-heading h1{
+            font-family: 'Lobster', cursive;
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+</div>
 <hr>
 {% for image_item in images %}
 <div class="wrapper-grid">
