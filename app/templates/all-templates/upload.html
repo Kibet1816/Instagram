@@ -10,11 +10,11 @@
                 <h1 class="text-center" style="font-family: 'Lobster', cursive; font-size: 30px; color: black;">Upload image</h1>
             </div>
             <div class="panel-body">
-                <form  action="{%url 'prof'%}" method="post">
+                <form  action="{%url 'upload'%}" method="POST" enctype="multipart/form-data">
                     {%csrf_token%}
                     
                     {% bootstrap_form form layout='inline' %}
-                    <button class="btn btn-success btn-lg" type="submit">Upload</button>
+                    <input class="btn btn-success btn-lg" type="submit" value="Upload">
                 </form>
                 <style>
                     .btn {
@@ -38,4 +38,8 @@
     <div class="col-md-3"></div>
 </div>
 {{form.media}}
+{% endblock %}
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
 {% endblock %}

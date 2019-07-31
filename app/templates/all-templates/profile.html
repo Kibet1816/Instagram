@@ -16,11 +16,9 @@
 <hr>
 {% for image_item in images %}
 <div class="wrapper-grid">
-    <button type="button" data-toggle="modal" data-target="#exampleModalLong{{image_item.id}}">
         <div class="content">
             <div class="content-overlay"></div>
-            <img src="{{image_item.image.url}}" alt="">
-        </button>
+            <img type="button" data-toggle="modal" data-target="#exampleModalLong{{image_item.id}}" src="{{image_item.image.url}}" alt="">
         {% for image_item in images %}
         <div class="modal fade" id="exampleModalLong{{image_item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
