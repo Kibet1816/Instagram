@@ -9,6 +9,12 @@ def index(request):
     """
     return render(request,'all-templates/index.html')
 
+def homepage(request):
+    """
+    View function to render the homepage
+    """
+    return render(request,'all-templates/home.html')
+
 @login_required(login_url='/accounts/login/')
 def display_images(request):
     images = Image.all_images()
@@ -30,3 +36,6 @@ def upload_image(request):
     
     return render(request, 'all-templates/profile.html', {'form':form,'images':images})
         
+# @login_required(login_url='/accounts/login/')
+def prof(request):
+    return render(request,'all-templates/profile.html')

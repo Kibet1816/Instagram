@@ -1,18 +1,30 @@
-{% extends 'all-templates/base.html' %}
-
-{% block content %}
-<br><br>
-<hr>
-<p class="text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sint sequi dolor cum pariatur, eum at aperiam quas ipsam placeat odit voluptate, vitae, ratione deserunt eius totam eligendi fugiat enim?</p>
-<p class="text-center">Post awesome images in profile section.</p>
-<hr>
-{% for image_item in images %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            {{image_item.image}}
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body><br>
+    <div class="header" style="text-align: center;" >
+        <img src="/media/images/download.jpeg" alt="" style="align-content: center;" >
     </div>
-</div>
-{% endfor %}
-{% endblock %}
+    <hr>
+    <div class="lorem">
+        <p class="text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde quia minima in laboriosam, ab repellendus earum modi neque aliquid totam, illo at dolorem cumque sint, maxime dignissimos. Provident, fugiat!</p>
+        <p class="text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde quia minima in laboriosam, ab repellendus earum modi neque aliquid totam, illo at dolorem cumque sint, maxime dignissimos. Provident, fugiat!</p>
+    </div>
+    <hr>
+    <div class="sign" style="text-align: center;" >
+        <a href="/accounts/register/"><button class = 'btn btn-lg btn btn-info '>Sign up</button></a>
+        <a href="/accounts/login/"><button class = 'btn btn-lg btn btn-success'  >Sign in</button></a>
+    </div>
+</body>
+</html>

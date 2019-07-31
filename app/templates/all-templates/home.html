@@ -1,0 +1,18 @@
+{% extends 'all-templates/base.html' %}
+
+{% block content %}
+<br><br>
+<hr>
+<p class="text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sint sequi dolor cum pariatur, eum at aperiam quas ipsam placeat odit voluptate, vitae, ratione deserunt eius totam eligendi fugiat enim?</p>
+<p class="text-center">Post awesome images in profile section.</p>
+<hr>
+{% for image_item in images %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {{image_item.image}}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
