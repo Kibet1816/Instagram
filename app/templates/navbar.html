@@ -44,10 +44,10 @@
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false"><p>Account</p></a>
       <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="{% url 'index' %}"><p>Home</p></a>
+        <a class="dropdown-item" href="{% url 'home' %}"><p>Home</p></a>
         <a class="dropdown-item" href="/accounts/password/change"><p>Change password</p></a>
-        <a class="dropdown-item" href="{% url 'profile' %}"><p>View Profile</p></a>
-        <a class="dropdown-item" href="logout/"><p>Logout</p></a>
+        <a class="dropdown-item" href="{% url 'profile' username=user %}"><p>View Profile</p></a>
+        <a class="dropdown-item" href="/logout"><p>Logout</p></a>
       </div>
     </div>
     <style>

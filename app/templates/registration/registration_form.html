@@ -17,11 +17,11 @@
         </div>
         <div class="panel-body">
 
-          <form action="/accounts/register/" method="post" >
+          <form action="/accounts/register/" method="POST" >
             {% csrf_token %}
             {% bootstrap_form form %}
             <div class="form-group">
-              <a href="{% url 'index' %}"><button class="btn btn-primary btn-md" >Sign Up</button></a>
+              <a href="{% url 'index' %}"><input type="submit" class="btn btn-primary btn-md" value="Sign Up"></a>
             </div>
 
             <input type="hidden" name="next" value="{{next}}">

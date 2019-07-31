@@ -1,14 +1,15 @@
-from django.conf import settings
 from django.conf.urls import url
-from django.conf.urls.static import static
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    url('^$', views.index, name='home'),
-    url('^home/$', views.homepage, name='index'),
-    url('^accounts/profile/upload/', views.image_upload, name='upload'),
-    url('^accounts/profile/$', views.profile, name='profile'),
-    url('^accounts/profile/upload_image/$', views.upload_image, name='upload_image'),
+    url(r'^$', views.index, name='index'),
+    url(r'^accounts/profile/upload/', views.image_upload, name='upload'),
+    url(r'accounts/profile/(?P<username>\w+)', views.profile, name='profile'),
+    url('profile/', views.homepage, name='home'),
+    url(r'^logout/$',auth_views.logout,{"next_page":'/'}),
 ]
 
 if settings.DEBUG:
