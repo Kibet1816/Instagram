@@ -1,6 +1,0 @@
-.gitignore
-*.pyc
-virtual/
-.env
-media/
-.vscode/
